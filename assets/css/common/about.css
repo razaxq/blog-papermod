@@ -112,6 +112,10 @@ body:has(.about-modern) .main {
     transform: scale(1.1) rotate(-6deg);
 }
 
+.about-modern .frog.no-hover:hover {
+    transform: none;
+}
+
 .about-modern .frog.bounce {
     animation: about-frog-bounce .6s cubic-bezier(.34, 1.56, .64, 1) forwards;
 }

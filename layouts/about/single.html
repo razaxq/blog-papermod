@@ -423,12 +423,19 @@
         frog.addEventListener('click', function () {
             if (reduceMotion) return;
             if (frog.classList.contains('bounce')) return;
+            frog.classList.remove('no-hover');
             frog.classList.add('bounce');
         });
         frog.addEventListener('animationend', function (e) {
             if (e.animationName === 'about-frog-bounce') {
                 frog.classList.remove('bounce');
+                if (frog.matches(':hover')) {
+                    frog.classList.add('no-hover');
+                }
             }
+        });
+        frog.addEventListener('mouseleave', function () {
+            frog.classList.remove('no-hover');
         });
     }
 
