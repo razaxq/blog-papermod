@@ -61,14 +61,14 @@
 -}}
 
 {{- $rack := slice
-  (dict "unit" "1U" "name" "Proxmox VE"  "tag" "hypervisor"     "port" ":8006"             "led" "green")
-  (dict "unit" "2U" "name" "Nginx Proxy" "tag" "reverse proxy"  "port" ":80"               "led" "green")
-  (dict "unit" "1U" "name" "Hugo Build"  "tag" "cf pages"       "port" "⚡ live"           "led" "green")
-  (dict "unit" "1U" "name" "Pagefind"    "tag" "search index"   "port" ":—"                "led" "green")
-  (dict "unit" "2U" "name" "Twikoo"      "tag" "comments"       "port" ":80"               "led" "green")
-  (dict "unit" "1U" "name" "EasyTier"    "tag" "mesh vpn"       "port" ":11010"            "led" "green")
-  (dict "unit" "2U" "name" "ZFS Pool"    "tag" "48TB · raidz1"   "port" "87% ⚠"             "led" "yellow")
-  (dict "unit" "1U" "name" "OpenWrt"     "tag" "gateway"        "port" "10.0.0.1"       "led" "green")
+  (dict "unit" "1U" "name" "Proxmox VE"        "tag" "MS-01 · hypervisor"        "port" ":8006"          "led" "green")
+  (dict "unit" "1U" "name" "OpenWrt"           "tag" "PVE VM · gateway"          "port" "10.0.0.1"       "led" "green")
+  (dict "unit" "2U" "name" "ZFS Pool"          "tag" "PVE · 48TB raidz1"         "port" "87% ⚠"          "led" "yellow")
+  (dict "unit" "1U" "name" "Vaultwarden"       "tag" "oracle · podman"           "port" "vault.dtft.net" "led" "green")
+  (dict "unit" "1U" "name" "Syncthing"         "tag" "oracle · personal"         "port" ":8384"          "led" "green")
+  (dict "unit" "1U" "name" "Syncthing Relay"   "tag" "oracle · public relay"     "port" ":22067"         "led" "green")
+  (dict "unit" "1U" "name" "Cloudflare Tunnel" "tag" "ingress · no public ports" "port" "cloudflared"    "led" "green")
+  (dict "unit" "1U" "name" "EasyTier"          "tag" "mesh vpn · all nodes"      "port" ":11010"         "led" "green")
 -}}
 
 {{- $gear := slice
