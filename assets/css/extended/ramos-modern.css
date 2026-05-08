@@ -287,34 +287,40 @@ body.dark .header {
 
 
 /* ══════════════════════════════════════════════════════
-   8. 滚动条
+   8. 滚动条 — 极简胶囊风
 ══════════════════════════════════════════════════════ */
 
-/* 滚动条加粗并提升对比度 */
+/* WebKit (Chrome / Edge / Safari) */
 ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
 }
-::-webkit-scrollbar-track {
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-corner {
     background: transparent;
 }
+
 ::-webkit-scrollbar-thumb {
-    background: var(--secondary);
-    border-radius: 6px;
+    background-color: color-mix(in srgb, var(--secondary) 35%, transparent);
     border: 2px solid transparent;
+    border-radius: 999px;
     background-clip: padding-box;
-    transition: background 0.2s ease;
+    transition: background-color 0.3s ease;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--accent);
-    background-clip: padding-box;
-    border: 2px solid transparent;
+    background-color: var(--accent);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: var(--accent-hover);
 }
 
 /* Firefox */
 * {
     scrollbar-width: thin;
-    scrollbar-color: var(--secondary) transparent;
+    scrollbar-color: color-mix(in srgb, var(--secondary) 35%, transparent) transparent;
 }
 
 

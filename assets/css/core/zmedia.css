@@ -36,11 +36,6 @@
     .footer {
         padding: calc((var(--footer-height) - var(--gap) - 10px) / 2) var(--gap);
     }
-    
-    ::-webkit-scrollbar {
-        width:15px;
-        height: 11px
-    }
 
     /* .page-header, .post-header {
     margin: 8px auto var(--content-gap) 0;
