@@ -131,7 +131,9 @@
             display: none;
             flex-direction: column;
             z-index: 1000;
-            top: 50px;
+            top: 100%;
+            left: 10px;
+            margin-top: 6px;
         }
 
         .menuItem {
@@ -291,6 +293,11 @@
             if (this.value.trim() === '') {
                 searchContainer.classList.remove('expanded');
             }
+        });
+
+        // 点击搜索框时收起搜索引擎菜单
+        searchInput.addEventListener('mousedown', function () {
+            menuSearchEng.style.display = 'none';
         });
 
         // 阻止点击搜索引擎按钮时的事件冒泡
